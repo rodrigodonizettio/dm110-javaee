@@ -46,4 +46,31 @@ public class HelloServiceImpl implements HelloService {
 	public Collection<MessageTO> getMessages() {
 		return cache.values();
 	}
+
+	/**
+	 * CALCULATOR EXERCISE - SLIDE-30/32 (DM100-Aula1_19554.pdf)
+	 */
+	@Override
+	public String calcSum(int val1, int val2) {
+		int sumResult = val1 + val2;
+		return String.format("<h1>Resultado da Soma: %s</h1>", sumResult);
+	}
+	
+	@Override
+	public String calcSub(int val1, int val2) {
+		int subResult = val1 - val2;
+		return String.format("<h1>Resultado da Subtração: %s</h1>", subResult);
+	}
+	
+	@Override
+	public String calcMul(int val1, int val2) {
+		int mulResult = val1 * val2;
+		return String.format("<h1>Resultado da Multiplicação: %s</h1>", mulResult);
+	}
+	
+	@Override
+	public String calcDiv(int val1, int val2) {
+		int divResult = val1 / val2;
+		return String.format("<h1>Resultado da Divisão: %s</h1>", divResult);
+	}
 }

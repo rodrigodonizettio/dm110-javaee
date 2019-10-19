@@ -34,5 +34,29 @@ public interface HelloService {
 	@Path("/messageList")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Collection<MessageTO> getMessages();
+	
+	/**
+	 * CALCULATOR EXERCISE - SLIDE-30/32 (DM100-Aula1_19554.pdf)
+	 */
+	@GET
+	@Path("/calc/sum/{val1}/{val2}")
+	@Produces(MediaType.TEXT_HTML)
+	String calcSum(@PathParam("val1") int val1, @PathParam("val2") int val2);
+	
+	@GET
+	@Path("/calc/sub/{val1}/{val2}")
+	@Produces(MediaType.TEXT_HTML)
+	String calcSub(@PathParam("val1") int val1, @PathParam("val2") int val2);
+	
+	@GET
+	@Path("/calc/mul/{val1}/{val2}")
+	@Produces(MediaType.TEXT_HTML)
+	String calcMul(@PathParam("val1") int val1, @PathParam("val2") int val2);
+	
+	@GET
+	@Path("/calc/div/{val1}/{val2}")
+	@Produces(MediaType.TEXT_HTML)
+	String calcDiv(@PathParam("val1") int val1, @PathParam("val2") int val2);
+	
 
 }
